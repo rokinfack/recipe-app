@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   {path: 'shopping-list', component: ShoppingListComponent},
 ]
 @NgModule({
-  imports:[RouterModule.forRoot(appRoutes, {useHash:true})],
+  imports:[RouterModule.forRoot(appRoutes)],
   exports:[RouterModule]
 })
 

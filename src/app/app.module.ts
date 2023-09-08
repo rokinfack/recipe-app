@@ -14,6 +14,9 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing.module';
+import { HttpClientModule } from '@angular/common/http'; // Import du HttpClientModule
+import { FireBaseService } from './firebase.service';
+
 
 @NgModule({
   declarations: [
@@ -31,9 +34,10 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [FireBaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

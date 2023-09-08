@@ -12,7 +12,7 @@ export class RecipeService {
 
 
 
-   recipes : Recipe[] = [
+  private recipes : Recipe[] = [
       new Recipe('a test recipe',
       '04102023-ratatouille-lede',
       'https://assets.bonappetit.com/photos/64349ba03fd52da4745a35f4/1:1/w_2240,c_limit/04102023-ratatouille-lede.jpg',
@@ -41,6 +41,10 @@ export class RecipeService {
       ]),
     ];
 
+
+    getRecipes(){
+      return this.recipes.slice();
+    }
 
 
   getRecipeById(index:number){
