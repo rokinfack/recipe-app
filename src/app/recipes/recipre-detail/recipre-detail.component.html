@@ -1,31 +1,38 @@
-<div class="row">
-  <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+<div class="row ">
+  <div class="col-xs-12 mt-4">
+    <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="height: 300px; width: 300px;">
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-  <h1>  Recipe Name</h1>
+  <h1>  {{recipe.name}}</h1>
   </div>
+</div>
+<div class="row ">
+    <div class="col-xs-12">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>
+          Toggle dropdown
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="onAddShoppingList()">Add to shopping List</button>
+          <button ngbDropdownItem (click)="onEditShoppingList()"> Edit</button>
+          <button ngbDropdownItem (click)="onDeleteShoppingList()">Delete</button>
+        </div>
+      </div>
+    </div>
+
 </div>
 <div class="row">
   <div class="col-xs-12">
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle"> Manege Recipe <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="">To shopping list</a></li>
-      <li><a href="">Edit </a></li>
-      <li><a href="">Delete</a></li>
-    </ul>
-  </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-name
+Whate else ?
   </div>
 <div class="row">
   <div class="col-xs-12">
- description
+   <ul class="list-group" >
+    <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+      {{ ingredient.name}} - {{ ingredient.amount}}
+    </li>
+  </ul>
   </div>
 </div>

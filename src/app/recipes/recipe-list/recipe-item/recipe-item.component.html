@@ -1,1 +1,19 @@
-<p>recipe-item works!</p>
+<a
+[routerLink]="[index]"
+routerLinkActive="active"
+ class="list-group-item clearfix"
+ >
+  <hr>
+<div class="d-flex justify-content-between">
+  <div class="">
+
+    <h4 class="list-group-item"> {{recipe.name}}</h4>
+    <p class="list-group-item">{{recipe.description}}</p>
+    </div>
+    <div class="">
+      <img [src]="recipe.imagePath" alt="" class="img-responsive" style="max-height: 70px;">
+    </div>
+</div>
+</a>
+
+

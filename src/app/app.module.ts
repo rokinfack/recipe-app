@@ -6,12 +6,14 @@ import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 
 import { RecipreDetailComponent } from './recipes/recipre-detail/recipre-detail.component';
-import { ShoppingComponent } from './shopping/shopping.component';
+
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.component';
+import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingAddComponent } from './shopping/shopping-add/shopping-add.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
     HeaderComponent,
     RecipesComponent,
     RecipreDetailComponent,
-    ShoppingComponent,
+
     ShoppingListComponent,
     ShoppingEditComponent,
     ShoppingAddComponent,
@@ -27,7 +29,9 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
     RecipeItemComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,13 @@ import { Recipe } from '../models/recipres.model';
 })
 export class RecipesComponent {
 
- 
+  recipeSelect!:Recipe;
+
+  onSelecteRecipe(fe:Recipe){
+    this.recipeSelect = fe;
+  }
+
+
 
 
 
